@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="theme">
+        <i class="fas fa-sun"></i>
+        <label class="switch" for="toggle">
+            <input id="toggle" type="checkbox" name='toggle'>
+            <span class="slider round"></span>
+        </label>
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <i class=" btn-modal fas fa-cog" data-modal-target="#modal"></i>
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">Paramètre</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="color-theme">
+                <div class="child theme-light">
+                    <input type="radio" id="lightToggle" name="theme-color" value="lightToggle" data-theme="light" checked>
+                    <label for="lightToggle">Light</label>
+                </div>
+            </div>
+            <div class="color-theme">
+                <div class="child theme-blue">
+                    <input type="radio" id="blueToggle" name="theme-color" value="blueToggle" data-theme="blue">
+                    <label for="blueToggle">Blue</label>
+                </div>
+            </div>
+            <div class="color-theme">
+                <div class="child theme-dark">
+                    <input type="radio" id="darkToggle" name="theme-color" value="darkToggle" data-theme="dark">
+                    <label for="darkToggle">Dark</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+
+
+    <div class="container">
+        <h1>Color Theme</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Saepe reiciendis impedit non quibusdam expedita quia,
+            cum error alias <a href="#">debitis accusantium</a> incidunt vero adipisci qui, esse, laudantium suscipit
+            corrupti unde dolores.</p>
+
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>

@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    transition: background .3s linear,
+    color 0.3s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    background: #fff;
+}
+
+.container p{
+  margin: 0 20px;
+}
+.theme{
+  position: absolute;
+  right: 200px;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0 10px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .color-theme{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #666667;
+    width: 150px;
+    height: 64px;
+    margin: 20px 20px;
+    text-align: center;
+  }
+  .color-theme input{
+    width: 10%;
+    margin-right: 10px;
+  }
+  .child{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body.dark{
+    background-color: #464646;
+    color: white;
+    transition: 0.4s;
+  }
+  body.blue{
+    background-color: #15202B;
+    color: white;
+    transition: 0.4s;
+  }
+  body.light{
+    background-color: #fff;
+    color: #000;
+    transition: 0.4s;
+  }
+  body.dark .modal{
+    background-color: #464646;
+    color: white;
+    transition: 0.4s;
+  }
+  body.blue  .modal{
+    background-color: #15202B;
+    color: white;
+    transition: 0.4s;
+  }
+  body.light .modal{
+    background-color: #fff;
+    color: #000;
+    transition: 0.4s;
+  }
+  body.dark a{
+    color: #9497F9;
+  }
+  a{
+    text-decoration: none;
+  }
+  .theme-blue{
+    background-color: #15202B;
+    color: white;
+    transition: 0.4s;
+  }
+  .theme-light{
+    background-color: #fff;
+    color: #000;
+    transition: 0.4s;
+  }
+  .theme-dark{
+    background-color: #000;
+    color: white;
+    transition: 0.4s;
+  }
+
+.btn-modal{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 700px;
+    max-width: 80%;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+  .modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    padding: 10px 15px;
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
